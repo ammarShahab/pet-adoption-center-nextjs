@@ -109,8 +109,8 @@ const pets = [
 
 export default function ProductHighlight() {
   return (
-    <section className="py-12 bg-base-100 max-w-7xl mx-auto">
-      <div className="container mx-auto px-4">
+    <section className="py-12 bg-base-100  ">
+      <div className="container max-w-7xl mx-auto px-4  mt-10">
         <h2 className="text-3xl font-bold text-center mb-8">
           Featured Pets for Adoption
         </h2>
@@ -119,7 +119,7 @@ export default function ProductHighlight() {
           {pets.slice(0, 6).map((pet) => (
             <div
               key={pet.id}
-              className="card bg-base-200 shadow-xl rounded-2xl overflow-hidden"
+              className="card bg-gray-200 shadow-2xl rounded-2xl overflow-hidden"
             >
               <figure>
                 <img
