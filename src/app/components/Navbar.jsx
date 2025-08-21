@@ -14,7 +14,7 @@ const Navbar = () => {
         <Link href="/allpets">Pets</Link>
       </li>
       <li>
-        <Link href="/addpets">Add Pets</Link>
+        <Link href="/dashboard">Dashboard</Link>
       </li>
     </>
   );
