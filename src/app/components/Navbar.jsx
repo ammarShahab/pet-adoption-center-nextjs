@@ -1,6 +1,8 @@
 import React from "react";
 import LoginBTN from "./LoginBTN";
 import Link from "next/link";
+import logo from "../../../public/pet-logo.png";
+import Image from "next/image";
 
 const Navbar = () => {
   const links = (
@@ -44,7 +46,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a>
+          <Image src={logo} width={90} height={90}></Image>
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
