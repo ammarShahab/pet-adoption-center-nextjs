@@ -1,5 +1,5 @@
-import Banner from "./components/Banner";
-import ProductHighlight from "./components/ProductHighlight";
+import Banner from "../components/Banner";
+import ProductHighlight from "../components/ProductHighlight";
 
 export default function Home() {
   return (
