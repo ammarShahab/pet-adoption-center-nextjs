@@ -1,7 +1,13 @@
+import dbConnect from "@/lib/dbConnect";
+
 import React from "react";
 
-const AllPets = () => {
-  const pets = [
+export default async function AllPets() {
+  const petCollections = dbConnect("pets");
+  const pets = await petCollections.find({}).toArray();
+  console.log(pets);
+
+  /* const pets = [
     {
       id: 1,
       image:
@@ -105,16 +111,16 @@ const AllPets = () => {
         "Gentle kitten who loves quiet cuddles.\nShy at first but warms up quickly.\nEnjoys cozy blankets and sunny naps.\nPerfect for someone looking for a calm pet.",
       price: 85,
     },
-  ];
+  ]; */
   return (
-    <section className="py-12 bg-base-100 max-w-7xl mx-auto">
+    <section className="py-12 bg-base-100 max-w-7xl mx-auto mt-8">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-left bg-gray-200 rounded-xl py-3 px-2 mb-8">
           All Pets
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pets.map((pet) => (
+          {pets?.map((pet) => (
             <div
               key={pet.id}
               className="card bg-gray-200 shadow-2xl rounded-2xl overflow-hidden"
@@ -144,6 +150,4 @@ const AllPets = () => {
       </div>
     </section>
   );
-};
-
-export default AllPets;
+}
