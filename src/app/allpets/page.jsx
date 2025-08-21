@@ -5,7 +5,7 @@ import React from "react";
 export default async function AllPets() {
   const petCollections = dbConnect("pets");
   const pets = await petCollections.find({}).toArray();
-  console.log(pets);
+  // console.log(pets);
 
   /* const pets = [
     {

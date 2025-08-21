@@ -1,8 +1,5 @@
-"use client";
-import { useState } from "react";
-
 // Fake JSON data
-const pets = [
+/* const pets = [
   {
     id: 1,
     image:
@@ -105,9 +102,13 @@ const pets = [
       "Gentle kitten who loves quiet cuddles.\nShy at first but warms up quickly.\nEnjoys cozy blankets and sunny naps.\nPerfect for someone looking for a calm pet.",
     price: 85,
   },
-];
+]; */
 
-export default function ProductHighlight() {
+import dbConnect from "@/lib/dbConnect";
+
+export default async function ProductHighlight() {
+  const petCollections = dbConnect("pets");
+  const pets = await petCollections.find({}).limit(6).toArray();
   return (
     <section className="py-12 bg-base-100  ">
       <div className="container max-w-7xl mx-auto px-4  mt-10">
@@ -116,7 +117,7 @@ export default function ProductHighlight() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {pets.slice(0, 6).map((pet) => (
+          {pets.map((pet) => (
             <div
               key={pet.id}
               className="card bg-gray-200 shadow-2xl rounded-2xl overflow-hidden"
