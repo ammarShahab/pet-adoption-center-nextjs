@@ -1,4 +1,5 @@
 import dbConnect from "@/lib/dbConnect";
+import Link from "next/link";
 
 import React from "react";
 
@@ -113,9 +114,9 @@ export default async function AllPets() {
     },
   ]; */
   return (
-    <section className="py-12 bg-base-100 max-w-7xl mx-auto mt-8">
+    <section className=" bg-base-100 max-w-7xl mx-auto mt-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-left bg-gray-200 rounded-xl py-3 px-2 mb-8">
+        <h2 className="text-3xl font-bold text-left bg-gray-200 text-gray-600 rounded-xl py-3 px-2 mb-8">
           All Pets
         </h2>
 
@@ -141,7 +142,9 @@ export default async function AllPets() {
                   Adoption Fee: ${pet.price}
                 </p>
                 <div className="card-actions justify-end mt-4">
-                  <button className="btn btn-primary">View Details</button>
+                  <Link href={`/details/${pet._id}`}>
+                    <button className="btn btn-primary">View Details</button>
+                  </Link>
                 </div>
               </div>
             </div>
