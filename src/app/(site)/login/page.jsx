@@ -1,4 +1,4 @@
-import Login from "@/app/components/Login";
+import GoogleLogin from "@/app/components/GoogleLogin";
 import React from "react";
 
 export default function SocialLogin() {
@@ -7,7 +7,7 @@ export default function SocialLogin() {
       <div className="hero-content flex-col shadow-2xl">
         <div className="text-center lg:text-left">
           <h1 className="text-3xl font-bold">Login with social accounts</h1>
-          <Login />
+          <GoogleLogin />
           {/* <p className="py-6">
       Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
       excepturi exercitationem quasi. In deleniti eaque aut repudiandae et

@@ -1,14 +1,19 @@
 "use client";
 
 import React from "react";
+import { signIn, useSession } from "next-auth/react";
 
-export default function Login() {
-  const handleGoogleLogin = () => {
+export default function GoogleLogin() {
+  const handleGoogleLogin = (provider) => {
     console.log(JSON.stringify("clicked"));
+    const response = signIn(provider, {
+      redirect: true,
+      callbackUrl: "/",
+    });
   };
   return (
     <button
-      onClick={() => handleGoogleLogin()}
+      onClick={() => handleGoogleLogin("google")}
       className="btn bg-white w-full mt-10 text-black border-[#e5e5e5]"
     >
       <svg
