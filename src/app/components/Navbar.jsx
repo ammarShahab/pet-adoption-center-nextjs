@@ -1,3 +1,5 @@
+"use-client";
+
 import React from "react";
 import LoginBTN from "./LoginBTN";
 import Link from "next/link";

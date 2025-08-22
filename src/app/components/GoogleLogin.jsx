@@ -2,14 +2,20 @@
 
 import React from "react";
 import { signIn, useSession } from "next-auth/react";
+import toast from "react-hot-toast";
 
 export default function GoogleLogin() {
+  // const session = useSession();
+
+  // console.log(session);
+
   const handleGoogleLogin = (provider) => {
     console.log(JSON.stringify("clicked"));
     const response = signIn(provider, {
-      redirect: true,
-      callbackUrl: "/",
+      // redirect: true,
+      // callbackUrl: "/",
     });
+    console.log(response);
   };
   return (
     <button
