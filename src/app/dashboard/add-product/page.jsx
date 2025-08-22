@@ -15,10 +15,16 @@ export default function AddProductPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Product Data:", formData);
+    const res = await fetch("http://localhost:3000/api/addproducts", {
+      method: "POST",
+      body: JSON.stringify(formData),
+    });
     alert("Product Added Successfully!");
+    const postedRes = await res.json();
+
     setFormData({ name: "", price: "", description: "", image: "" });
   };
 

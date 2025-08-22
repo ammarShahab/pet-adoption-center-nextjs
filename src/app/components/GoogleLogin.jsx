@@ -12,8 +12,8 @@ export default function GoogleLogin() {
   const handleGoogleLogin = (provider) => {
     console.log(JSON.stringify("clicked"));
     const response = signIn(provider, {
-      // redirect: true,
-      // callbackUrl: "/",
+      redirect: true,
+      callbackUrl: "/allpets",
     });
     console.log(response);
   };
