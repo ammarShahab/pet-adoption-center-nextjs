@@ -5,8 +5,11 @@ import LoginBTN from "./LoginBTN";
 import Link from "next/link";
 import logo from "../../../public/pet-logo.png";
 import Image from "next/image";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
+  // const session = useSession();
+
   const links = (
     <>
       <li>

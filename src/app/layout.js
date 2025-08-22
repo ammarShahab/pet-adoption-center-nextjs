@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import { Toaster } from "react-hot-toast";
-import { SessionProvider } from "next-auth/react";
+import NextAuthProviders from "@/Providers/NextAuthProviders";
+import Providers from "./provider";
+import Navbar from "./components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,14 +23,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* <SessionProvider> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <main className="min-h-screen ">{children}</main>
+        <Providers>
+          <main className="min-h-screen ">{children}</main>
+        </Providers>
       </body>
-      <Toaster position="top-left" reverseOrder={false} />
-      {/* </SessionProvider> */}
     </html>
   );
 }
