@@ -24,6 +24,7 @@ export default function AddProductPage() {
     });
     alert("Product Added Successfully!");
     const postedRes = await res.json();
+    console.log("posted data", postedRes);
 
     setFormData({ name: "", price: "", description: "", image: "" });
   };
