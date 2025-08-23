@@ -18,10 +18,13 @@ export default function AddProductPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Product Data:", formData);
-    const res = await fetch("http://localhost:3000/api/addproducts", {
-      method: "POST",
-      body: JSON.stringify(formData),
-    });
+    const res = await fetch(
+      "https://pet-adoption-center-nextjs.vercel.app/api/addproducts",
+      {
+        method: "POST",
+        body: JSON.stringify(formData),
+      }
+    );
     alert("Product Added Successfully!");
     const postedRes = await res.json();
     console.log("posted data", postedRes);
