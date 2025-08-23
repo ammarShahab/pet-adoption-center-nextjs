@@ -140,7 +140,7 @@ export default async function AllPets() {
                   {pet.description.slice(0, 50)} ..
                 </p>
                 <p className="mt-2 font-semibold text-lg text-primary">
-                  Adoption Fee: ${pet.price}
+                  Price: ${pet.price}
                 </p>
                 <div className="card-actions justify-end mt-4">
                   <Link href={`/details/${pet._id}`}>

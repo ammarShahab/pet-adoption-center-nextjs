@@ -136,7 +136,7 @@ export default async function ProductHighlight() {
                   {pet.description}
                 </p> */}
                 <p className="mt-2 font-semibold text-lg text-primary">
-                  Adoption Fee: ${pet.price}
+                  Price: ${pet.price}
                 </p>
                 <div className="card-actions justify-end mt-4">
                   <Link
