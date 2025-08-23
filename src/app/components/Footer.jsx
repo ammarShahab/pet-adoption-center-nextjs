@@ -9,9 +9,13 @@ const Footer = () => {
         <aside>
           <Image src={logo} height={90} width={90} alt="logo"></Image>
           <p className="mt-5">
-            Connecting pets with loving homes.
+            We are more than just an online bookstore — we are a <br /> trusted
+            destination for quick, secure, and hassle-free book purchases.{" "}
             <br />
-            Join us in making a difference, one adoption at a time
+            Every feature we design, every process we refine, is focused on
+            making <br /> your buying experience as smooth and enjoyable as
+            possible
+            <br />
           </p>
         </aside>
         <nav>
