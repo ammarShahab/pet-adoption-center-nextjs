@@ -105,6 +105,7 @@
 ]; */
 
 import dbConnect from "@/lib/dbConnect";
+import Link from "next/link";
 
 export default async function ProductHighlight() {
   const petCollections = dbConnect("pets");
@@ -138,7 +139,12 @@ export default async function ProductHighlight() {
                   Adoption Fee: ${pet.price}
                 </p>
                 <div className="card-actions justify-end mt-4">
-                  <button className="btn btn-primary">View Details</button>
+                  <Link
+                    href={`/details/${pet._id}`}
+                    className="btn btn-primary"
+                  >
+                    View Details
+                  </Link>
                 </div>
               </div>
             </div>
