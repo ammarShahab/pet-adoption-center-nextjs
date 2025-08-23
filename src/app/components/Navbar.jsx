@@ -3,7 +3,7 @@
 import React from "react";
 import LoginBTN from "./LoginBTN";
 import Link from "next/link";
-import logo from "../../../public/pet-logo.png";
+import logo from "../../../public/book_logo.png";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
         <Link href="/">Home</Link>
       </li>
       <li>
-        <Link href="/allpets">Pets</Link>
+        <Link href="/allbooks">Books</Link>
       </li>
       <li>
         <Link href="/dashboard">Dashboard</Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
         <Link href="/">
           <li>Home</li>
         </Link>
-        <Link href="/allpets">
+        <Link href="/allbooks">
           <li>Pets</li>
         </Link>
         <Link href="/addpets">

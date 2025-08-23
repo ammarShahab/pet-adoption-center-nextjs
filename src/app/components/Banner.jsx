@@ -20,7 +20,7 @@ const Banner = () => {
             just a companion, but a lifelong friend who will fill your days with
             joy and unconditional love.
           </p>
-          <Link href={"/allpets"}>
+          <Link href={"/allbooks"}>
             <button className="btn btn-primary">Get Started</button>
           </Link>
         </div>

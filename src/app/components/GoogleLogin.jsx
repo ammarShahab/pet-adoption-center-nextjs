@@ -13,7 +13,7 @@ export default function GoogleLogin() {
     console.log(JSON.stringify("clicked"));
     const response = signIn(provider, {
       redirect: true,
-      callbackUrl: "/allpets",
+      callbackUrl: "/allbooks",
     });
     console.log(response);
   };
