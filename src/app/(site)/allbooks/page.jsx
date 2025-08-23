@@ -116,7 +116,7 @@ export default async function AllPets() {
   ]; */
   return (
     <section className=" bg-base-100 max-w-7xl mx-auto mt-8">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-10">
         <h2 className="text-3xl font-bold text-left bg-gray-200 text-gray-600 rounded-xl py-3 px-2 mb-8">
           All Pets
         </h2>
