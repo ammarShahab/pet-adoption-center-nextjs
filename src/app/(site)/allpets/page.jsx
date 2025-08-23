@@ -1,7 +1,8 @@
 import dbConnect from "@/lib/dbConnect";
 import Link from "next/link";
-
 import React from "react";
+
+export const dynamic = "force-dynamic";
 
 export default async function AllPets() {
   const petCollections = dbConnect("pets");
@@ -136,7 +137,7 @@ export default async function AllPets() {
               <div className="card-body">
                 <h3 className="card-title">{pet.name}</h3>
                 <p className="text-sm text-gray-600 line-clamp-4">
-                  {pet.description}
+                  {pet.description.slice(0, 50)} ..
                 </p>
                 <p className="mt-2 font-semibold text-lg text-primary">
                   Adoption Fee: ${pet.price}

@@ -132,9 +132,9 @@ export default async function ProductHighlight() {
               </figure>
               <div className="card-body">
                 <h3 className="card-title">{pet.name}</h3>
-                <p className="text-sm text-gray-600 line-clamp-4">
+                {/*  <p className="text-sm text-gray-600 line-clamp-4">
                   {pet.description}
-                </p>
+                </p> */}
                 <p className="mt-2 font-semibold text-lg text-primary">
                   Adoption Fee: ${pet.price}
                 </p>
