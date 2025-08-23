@@ -34,7 +34,7 @@ export default async function Details({ params }) {
             Price: ${details.price}
           </p>
           <button className="px-6 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
-            Adopt Now
+            Buy Now
           </button>
         </div>
       </div>

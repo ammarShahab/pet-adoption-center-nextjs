@@ -118,7 +118,7 @@ export default async function AllPets() {
     <section className=" bg-base-100 max-w-7xl mx-auto mt-8">
       <div className="container mx-auto px-4 mb-10">
         <h2 className="text-3xl font-bold text-left bg-gray-200 text-gray-600 rounded-xl py-3 px-2 mb-8">
-          All Pets
+          All Books
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -127,11 +127,11 @@ export default async function AllPets() {
               key={pet.id}
               className="card bg-gray-200 shadow-2xl rounded-2xl overflow-hidden"
             >
-              <figure>
+              <figure className="p-3">
                 <img
                   src={pet.image}
                   alt={pet.name}
-                  className="w-full h-56 object-cover"
+                  className="w-full h-56 object-contain"
                 />
               </figure>
               <div className="card-body">
