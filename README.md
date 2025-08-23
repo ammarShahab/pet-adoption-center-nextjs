@@ -1,20 +1,30 @@
 # 📚 BookStore – Simple Book Purchase Website
 
-A lightweight e-commerce platform where users can browse a wide collection of books and instantly purchase them without a complex checkout process. The website is designed for simplicity, speed, and a smooth buying experience.
+A lightweight e-commerce platform where users can browse a wide collection of books and instantly purchase . The website is designed for simplicity, speed, and a smooth buying experience.
 
 ---
+
+### Live Link https://pet-adoption-center-nextjs.vercel.app/
 
 ## ⚙️ Setup & Installation
 
-### 1. Clone the repository
+### Clone the repository
 
-```bash
 git clone https://github.com/your-username/bookstore.git
-cd bookstore
 
----
-
-### 2. Install dependencies
+### Install dependencies
 
 npm install
-```
+
+### Run the development server
+
+npm run dev
+
+🌐 Route Summary
+
+| Route Path       | Description                                    |
+| ---------------- | ---------------------------------------------- |
+| `/`              | Homepage with banner and highlighted books     |
+| `/allbooks`      | All books listing                              |
+| `/books/:bookId` | Single book details page with “Buy Now” option |
+| `/add-products`  | Add books to the database                      |
