@@ -1,5 +1,5 @@
 import React from "react";
-import banner from "../../../public/Pet-Banner2.jpg";
+import banner from "../../../public/book-banner-1.jpg";
 import Link from "next/link";
 
 const Banner = () => {
@@ -13,12 +13,14 @@ const Banner = () => {
       <div className="hero-overlay"></div>
       <div className="hero-content text-neutral-content text-center">
         <div className="">
-          <h1 className="mb-5 text-5xl font-bold">Find Your Forever Friend</h1>
+          <h1 className="mb-5 text-5xl font-bold">
+            Buy Books Anytime, Anywhere
+          </h1>
           <p className="mb-5">
-            Every pet deserves a second chance at love and happiness. Discover
-            adorable cats and dogs waiting to be adopted, and bring home not
-            just a companion, but a lifelong friend who will fill your days with
-            joy and unconditional love.
+            Choose a book, buy it instantly, and dive straight into a world of
+            stories. Enjoy the simplicity of picking your favorite titles and
+            having them ready for you in no time, making your reading experience
+            seamless, fast, and enjoyable from start to finish.
           </p>
           <Link href={"/allbooks"}>
             <button className="btn btn-primary">Get Started</button>
